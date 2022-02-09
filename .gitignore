@@ -1,6 +1,6 @@
 bin/
 obj/
-{ProjectName.Solution/ProjectName}/bin/
-{ProjectName.Solution/ProjectName}/obj/
-{ProjectName.Solution/ProjectName.Tests}/bin/
-{ProjectName.Solution/ProjectName.Tests}/obj/
+NumberToWords.Solution/NumberToWords/bin/
+NumberToWords.Solution/NumberToWords/obj/
+NumberToWords.Solution/NumberToWords.Tests/bin/
+NumberToWords.Solution/NumberToWords.Tests/obj/
