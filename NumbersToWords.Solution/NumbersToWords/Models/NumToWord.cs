@@ -15,6 +15,18 @@ namespace NumbersToWords.Models
       {'8', "eight"},
       {'9', "nine"}
     };
+    public static Dictionary<string, string> Tens = new Dictionary<string, string>() {
+      {"11", "eleven"},
+      {"12", "twelve"},
+      {"13", "thirteen"},
+      {"14", "fourteen"},
+      {"15", "fifteen"},
+      {"16", "sixteen"},
+      {"17", "seventeen"},
+      {"18", "eighteen"},
+      {"19", "nineteen"}
+    };
+    
 
 
     public NumToWord(string userNumber)
@@ -26,9 +38,16 @@ namespace NumbersToWords.Models
     {
       string temp = UserNumber;
       string result = "";
-      foreach (char c in temp)
+      if (temp.Length == 2)
       {
-        result = Ones[c];
+        result = Tens[temp];  
+      }
+      else
+      {
+        foreach (char c in temp)
+        {
+          result = Ones[c];
+        }
       }
       return result;
     }

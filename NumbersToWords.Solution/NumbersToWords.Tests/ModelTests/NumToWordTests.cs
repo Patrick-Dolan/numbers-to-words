@@ -35,6 +35,14 @@ namespace NumbersToWords.Tests
         Assert.AreEqual(ConvertedNumbers[i], newNumToWord.ConvertNumToWord());
       }
     }
+    [TestMethod]
+    public void ConvertNumToWord_ConvertNumberElevenToWord_String()
+    {
+      string number = "11";
+      NumToWord newNumToWord = new NumToWord(number);
+      string result = newNumToWord.ConvertNumToWord();
+      Assert.AreEqual("eleven", result);
+    }
   }
 }
 
