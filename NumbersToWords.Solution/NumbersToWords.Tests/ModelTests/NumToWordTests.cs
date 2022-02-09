@@ -55,14 +55,25 @@ namespace NumbersToWords.Tests
         Assert.AreEqual(ConvertedNumbers[i], newNumToWord.ConvertNumToWord());
       }
     }
+    [TestMethod]
+    public void ConvertNumToWord_ConvertNumberTwentyFourToWord_String()
+    {
+      string number = "24";
+      NumToWord newNumToWord = new NumToWord(number);
+      string result = newNumToWord.ConvertNumToWord();
+      Assert.AreEqual("twenty four", result);
+    }
+    [TestMethod]
+    public void ConvertNumToWord_ConvertTensThroughToNinety_String()
+    {
+      List<string> numbersToConvert = new List<string> {"10", "20", "30", "40", "50", "60", "70", "80", "90"};
+      List<string> ConvertedNumbers = new List<string> {"ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+      for (int i = 0; i <= 8; i++)
+      {
+        NumToWord newNumToWord = new NumToWord(numbersToConvert[i]);
+        Console.WriteLine(i);
+        Assert.AreEqual(ConvertedNumbers[i], newNumToWord.ConvertNumToWord());
+      }
+    }
   }
 }
-
-// Example Test Method Structure
-//_________________________
-// [TestMethod]
-// public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-// {
-//   // any necessary logic to prep for test; instantiating new classes, etc.
-//   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-// }
