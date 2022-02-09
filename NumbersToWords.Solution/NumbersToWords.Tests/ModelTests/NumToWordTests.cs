@@ -6,7 +6,13 @@ namespace NumbersToWords.Tests
   [TestClass]
   public class NumToWordTests
   {
-    // Test methods go here
+    [TestMethod]
+    public void NumToWord_InstantiateNumToWord_NumToWord()
+    {
+      string number = "3";
+      NumToWord newNumToWord = new NumToWord(number);
+      Assert.AreEqual(typeof(NumToWord), newNumToWord.GetType());
+    }
   }
 }
 // Example Test Method Structure
