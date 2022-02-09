@@ -43,6 +43,18 @@ namespace NumbersToWords.Tests
       string result = newNumToWord.ConvertNumToWord();
       Assert.AreEqual("eleven", result);
     }
+    [TestMethod]
+    public void ConvertNumToWord_ConvertNumbersElevenThroughNineteen_String()
+    {
+      List<string> numbersToConvert = new List<string> {"11", "12", "13", "14", "15", "16", "17", "18", "19"};
+      List<string> ConvertedNumbers = new List<string> {"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+      for (int i = 0; i <= 8; i++)
+      {
+        NumToWord newNumToWord = new NumToWord(numbersToConvert[i]);
+        Console.WriteLine(i);
+        Assert.AreEqual(ConvertedNumbers[i], newNumToWord.ConvertNumToWord());
+      }
+    }
   }
 }
 

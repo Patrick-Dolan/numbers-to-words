@@ -15,7 +15,7 @@ namespace NumbersToWords.Models
       {'8', "eight"},
       {'9', "nine"}
     };
-    public static Dictionary<string, string> Tens = new Dictionary<string, string>() {
+    public static Dictionary<string, string> Teens = new Dictionary<string, string>() {
       {"11", "eleven"},
       {"12", "twelve"},
       {"13", "thirteen"},
@@ -40,7 +40,7 @@ namespace NumbersToWords.Models
       string result = "";
       if (temp.Length == 2)
       {
-        result = Tens[temp];  
+        result = Teens[temp];  
       }
       else
       {
